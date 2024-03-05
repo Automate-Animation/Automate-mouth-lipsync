@@ -1,0 +1,130 @@
+
+{% extends "base.html" %}
+
+{% block head %} 
+
+<meta name="title" content="free 2d Mouth lipsync software">
+<meta name="description" content="Discover everything about Auto Mouth Lipsync - a technique for automating lip movements in animation and film. Learn about its history, applications, and how it works with our comprehensive about page. ">
+<meta name="keywords" content="lip, video, mouth sync, mouth, live, animation, save, lip-sync, syncing, sync, performance, cartoon, software, character, edit, english, add, effects, voice, tools, show, face, lipsync, auto, film, sound, animated, original, lips, text, make, movements, audio, synced, word, synchronization, free, videos, words, lipsynch, expression, emotions, design, color, animate, youtube">
+<meta name="robots" content="index,follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 day">
+<meta name="author" content="OyKamal">
+
+
+<!-- mobile responsive meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{% block title %} About {% endblock %}</title>
+<!-- ** Plugins Needed for the Project ** -->
+<!-- plugins -->
+{% load static %}
+<!-- "{% static '/js/getCall.js' %}" -->
+<link rel="stylesheet" href="{% static 'js/plugins/bootstrap/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'js/plugins/themify-icons/themify-icons.css' %}">
+<!-- Main Stylesheet -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
+<!--Favicon-->
+<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE11F9JK2P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-EE11F9JK2P');
+</script>
+
+
+{% endblock %}
+{% comment %} {% block title %} Question {% endblock %} {% endcomment %}
+
+{% block content %}
+{% load static %}
+<!-- about us -->
+<section class="section-lg about pb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="section-title">About us</h2>
+        </div>
+        <div class="col-lg-12 mb-100">
+          <p>There is a wide variety of lip sync software that can be found on the internet nowadays, and each one comes with its own set of benefits and drawbacks. Some are free, some need payment, while others provide both options. It is essential to look for a lip sync tool that is appropriate for the kind of animation that you are working on at the moment.</p>
+          <p>MouthLipSync is an animation platform designed for professionals. The Lip Sync Tool is an excellent way to improve one's lip sync skills as well as to amuse one's friends and family.</p>
+          <p>This tool is only one of several tools that will be available in the future from our company for the creation of animations.</p>
+        </div>
+        <div class="col-lg-12">
+          <!-- about video -->
+          <div class="about-video">
+            <!-- <img class="img-fluid w-100" src="images/about/video-thumb.jpg" alt="video-thumb"> -->
+            <!-- <a class="venobox play-btn" href="https://www.youtube.com/embed/2yoYxetUrWQ" data-vbtype="iframe"><i class="ti-control-play"></i></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- /about us -->
+  
+  <!-- product -->
+  <section class="section product" style="background-image: url(images/backgrounds/about-bg.png);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">Our Product</h2>
+          <p class="mb-100">Far far away, behind the word mountains, far from the <br> countries Vokalia and Consonantia.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-50">
+          <a href="#"><img src="{% static 'images/mouth4.png' %}" alt="product-img" class="rounded w-100 img-fluid"></a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-50">
+          <a href="#"><img src="{% static 'images/mouth3.png' %}" alt="product-img" class="rounded w-100 img-fluid"></a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-50">
+          <a href="#"><img src="{% static 'images/mouth.png' %}" alt="product-img" class="rounded w-100 img-fluid"></a>
+        </div>
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-primary">Explore More Product</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- our vision -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="section-title">Our Vision</h2>
+          <p>Our company motto is if a process is repetitive, it is preferable for it to be automated since it may help us save time, keep focused and organized. This tool gives you access to a selection of readymade mouth assets from which to choose the one that works best with your character. After you have chosen the mouth asset, you can then allow the automated tool do the task of mouth synchronizing for you. Should you so wish, you are also able to submit your own own mouth assets. </p>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'images/mouth1.png' %}" alt="vision" class="img-fluid w-100">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /our vision -->
+  
+  <!-- clients -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">Our Clients</h2>
+          <ul class="list-inline text-center">
+            <li class="list-inline-item mx-5 mb-5"><a href="#"><img src="{% static 'images/mouth1.png' %}" alt="clients-logo" class="img-fluid"></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /clients -->
+  </section>
+  <!-- /product -->
+  
+  {% endblock %}

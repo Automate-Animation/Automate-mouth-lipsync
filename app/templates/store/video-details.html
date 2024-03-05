@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Video details {% endblock %}
+
+{% block content %}
+
+{% load static %}
+<script src="{% static 'js/getCall.js' %}"></script>
+
+{% if video %}
+<div class="jumbotron">
+    <h1 class="display-4">Ready!</h1>
+    <p class="lead">By clicking the button below, you may download the results of your lipsync request.</p>
+    <hr class="my-4">
+    <p>Only the next 72 hours will this link be active. It will thereafter be removed from our server.</p>
+    <a class="btn btn-primary btn-lg" href="{{ video.video }}" target="_blank" role="button">Download</a>
+    
+    <p>Unable to Download? Please copy the following url into your text browser tab.</p>
+    <p>{{ video.video }}</p>
+    <!-- <a class="btn btn-primary btn-lg" href="" onclick="downloadFile('{{video.video}}')" role="button">Download</a> -->
+
+
+</div>
+{% else %}
+<div class="jumbotron">
+    <h1 class="display-4">Pending!</h1>
+    <p class="lead">Your request to create a lip sync animation is currently in que. Depending on how many requests are waiting in line, this procedure might take anywhere between 3 and 5 minutes. </p>
+    <hr class="my-4">
+    <p>You must only use English words or else this tool won't function correctly.</p>
+    <!-- <a class="btn btn-lg" href={{video.video}} role="button">N</a> -->
+</div>
+{% endif %}
+
+    {% if gentle_json %}
+    <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Word</th>
+            <th scope="col">start</th>
+            <th scope="col">end</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for each_word in gentle_json.json.words %}
+          <tr>
+            <td>{{each_word.word}}</td>
+            <td>{{each_word.start}}</td>
+            <td>{{each_word.end}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+    <h3>{{file.name}} working in progress ...!</h3>
+    {% endif %}
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta name="title" content="Automate Mouth Lip Sync">
+  <meta name="description" content=" Auto Mouth Lipsync tool allows you to automate the motion of your 2D lips, Using your own mouth asset or one of our pre-furnished mouth styles, ">
+  <meta name="keywords" content="lip, video, mouth sync, mouth, live, animation, save, lip-sync, syncing, sync, performance, cartoon, software, character, edit, english, add, effects, voice, tools, show, face, lipsync, auto, film, sound, animated, original, lips, text, make, movements, audio, synced, word, synchronization, free, videos, words, lipsynch, expression, emotions, design, color, animate, youtube">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="1 day">
+  <meta name="author" content="OyKamal">
+  <meta name="fl-verify" content="e29212e53db2b0b9b52533c8edf83933">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{% block title %}  Mouth Lipsync {% endblock %}</title>
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- plugins -->
+  {% load static %}
+<!-- "{% static '/js/getCall.js' %}" -->
+  <link rel="stylesheet" href="{% static 'js/plugins/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'js/plugins/themify-icons/themify-icons.css' %}">
+  <!-- Main Stylesheet -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
+  <!--Favicon-->
+  <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE11F9JK2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EE11F9JK2P');
+</script>
+
+{% endblock %}
+</head>
+
+<body>
+
+<header class="navigation">
+  <div class=container>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <a class=navbar-brand href="/"><img class="img-fluid" src="{% static 'images/logo1.png' %}" alt="Mouthlipsync"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-align-right h4 text-dark"></i></button>
+      <div class="collapse navbar-collapse text-center" id=navigation>
+        <ul class="navbar-nav mx-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="/use/">How to use</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="search.html">Search Page</a></li> -->
+        </ul>
+        <!-- <form class="form-inline search-wrapper d-none d-lg-block" class="search-wrapper" action="search.html">
+          <input id="search-by" name="s" type="search" class="form-control" placeholder="Search here ...">
+          <button class="border-0 bg-white" type="submit"><i class="ti-search"></i></button>
+        </form> -->
+        {% if user.is_authenticated %}
+        <a href="/files/" class="btn btn-sm btn-outline-primary ml-lg-4">video</a>
+        <a href="/accounts/logout/" class="btn btn-sm btn-primary ml-lg-4">sign out</a>
+        {% else %}
+        <a href="/accounts/signup/" class="btn btn-sm btn-outline-primary ml-lg-4">Sign up</a>
+        <a href="/accounts/login/" class="btn btn-sm btn-primary ml-lg-4">Sign in</a>
+        {% endif %}
+        
+      </div>
+      <!-- <form class="form-inline search-wrapper d-block d-lg-none my-3" class="search-wrapper" action="search.html">
+        <input id="search-by" name="s" type="search" class="form-control" placeholder="Search here ...">
+        <button class="border-0 bg-white" type="submit"><i class="ti-search"></i></button>
+      </form> -->
+    </nav>
+  </div>
+</header>
+
+<!-- details page -->
+<div class="d-flex justify-content-center w-100">
+  <div class="w-75 p-5 shadow rounded">
+  {% block content %}
+  {% endblock %}
+</div>
+</div>
+<!-- /details page -->
+
+<footer>
+  <div class="container">
+    <div class="row align-items-center border-bottom py-5">
+      <div class="col-lg-4">
+        <ul class="list-inline footer-menu text-center text-lg-left">
+          <!-- <li class="list-inline-item"><a href="changelog.html">Changelog</a></li> -->
+          <li class="list-inline-item"><a href="/question/">Contact</a></li>
+          <li class="list-inline-item"><a href="/about/">About</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <a class="navbar-brand" href="/">
+          <img class="img-fluid" src="{% static 'images/logo1.png' %}" alt="Mouthlipsync">
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <ul class="list-inline social-icons text-lg-right text-center">
+          <!-- <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li> -->
+          <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="py-4 text-center">
+      <small class="text-light">Copyright: <a href="">kamal</a></small>
+    </div>
+  </div>
+</footer>
+
+<!-- plugins -->
+{% load static %}
+<!-- "{% static '/js/getCall.js' %}" -->
+<script src="{% static 'js/plugins/jQuery/jquery.min.js' %}"></script>
+<script src="{% static 'js/plugins/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/plugins/masonry/masonry.min.js' %}"></script>
+<script src="{% static 'js/plugins/clipboard/clipboard.min.js' %}"></script>
+<script src="{% static 'js/plugins/match-height/jquery.matchHeight-min.js' %}"></script>
+
+<!-- Main Script -->
+<!-- <script src="{% static 'js/script.js' %}"></script> -->
+
+</body>
+</html>
